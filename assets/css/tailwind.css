@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white border border-slate-200 rounded-card shadow-card;
+  }
+
+  .metric-number {
+    font-family: 'DM Mono', ui-monospace, monospace;
+    @apply font-bold text-slate-900;
+  }
+
+  .label-upper {
+    @apply text-xs font-semibold uppercase tracking-wider text-slate-500;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors cursor-pointer;
+    @apply text-slate-400 hover:bg-slate-800 hover:text-white;
+  }
+
+  .nav-item.active {
+    @apply bg-slate-800 text-teal-400 border-l-2 border-teal-400 pl-[14px];
+  }
+}

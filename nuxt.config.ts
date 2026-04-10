@@ -1,0 +1,40 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  compatibilityDate: '2024-11-01',
+  devtools: { enabled: true },
+
+  ssr: true,
+
+  nitro: {
+    preset: 'node-server',
+    output: {
+      dir: '.output',
+      serverDir: '.output/server',
+      publicDir: '.output/public',
+    },
+  },
+
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+  ],
+
+  tailwindcss: {
+    configPath: 'tailwind.config.ts',
+    cssPath: '~/assets/css/tailwind.css',
+    exposeConfig: false,
+  },
+
+  css: ['~/assets/css/tailwind.css'],
+
+  typescript: {
+    strict: true,
+    shim: false,
+  },
+
+  runtimeConfig: {
+    public: {
+      appName: 'DataWave',
+    },
+  },
+})

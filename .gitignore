@@ -1,0 +1,29 @@
+# Nuxt build outputs
+.nuxt/
+.output/
+dist/
+
+# Node modules
+node_modules/
+
+# Environment files (keep .env.example, not .env)
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor directories
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db

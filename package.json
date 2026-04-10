@@ -1,0 +1,28 @@
+{
+  "name": "edp-dashboards",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@pinia/nuxt": "^0.10.1",
+    "@vueuse/core": "^12.7.0",
+    "echarts": "^5.6.0",
+    "nuxt": "^3.16.1",
+    "pinia": "^3.0.1",
+    "postgres": "^3.4.5",
+    "vue": "^3.5.13",
+    "vue-echarts": "^7.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

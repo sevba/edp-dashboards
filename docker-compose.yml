@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: edp-dashboards:latest
+    container_name: edp-dashboards
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOST=0.0.0.0
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD', 'wget', '-qO-', 'http://localhost:3000/api/reconciliation/summary']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
