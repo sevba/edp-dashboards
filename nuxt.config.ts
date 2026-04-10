@@ -6,12 +6,7 @@ export default defineNuxtConfig({
   ssr: true,
 
   nitro: {
-    preset: 'node-server',
-    output: {
-      dir: '.output',
-      serverDir: '.output/server',
-      publicDir: '.output/public',
-    },
+    preset: 'netlify',
   },
 
   modules: [
