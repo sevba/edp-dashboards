@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col gap-6 min-w-[1280px]">
+  <div class="flex flex-col gap-6">
     <!-- Row 1: KPI Cards -->
-    <section class="grid grid-cols-5 gap-4">
+    <section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
       <ReconciliationKpiCard
         label="Total Records"
         :value="store.totalRecordsFormatted"
@@ -36,7 +36,7 @@
     </section>
 
     <!-- Row 2: Reserves chart + Records donut -->
-    <section class="grid gap-4" style="grid-template-columns: 60fr 40fr">
+    <section class="grid grid-cols-1 lg:grid-cols-[60fr_40fr] gap-4">
       <ChartsReservesByProduct
         :data="store.reservesByProduct"
         :loading="store.loading.reservesByProduct"
@@ -48,7 +48,7 @@
     </section>
 
     <!-- Row 3: Coverage code bar + Match rate table -->
-    <section class="grid grid-cols-2 gap-4">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <ChartsRecordsByCoverageCode
         :data="store.recordsByCoverageCode"
         :loading="store.loading.recordsByCoverageCode"
